@@ -12,7 +12,7 @@ public static class ConsoleLogger
     [System.Diagnostics.Conditional("ENABLE_LOG")]
     private static void DoLog(Action<string, Object> LogFunction, string prefix, Object myObj, params object[] msg)
     {
-        var name = (myObj ? myObj.name : "NullObject").Color("lightblue");
+        var name = (myObj ? myObj.name : "NullObject").Color("magenta");
         LogFunction($"{prefix}[{name}]: {String.Join("; ", msg)}\n ", myObj);
     }
 
